@@ -1,0 +1,26 @@
+.input-email-group {
+  margin-bottom: 0.8rem;
+  input[type=radio] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+}
+.email-submit {
+  background-color: #4aae9b;
+  color: #fff;
+  border: 0;
+  padding: 0.5rem;
+}
+.rating {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1px;
+  i {
+    font-size: 1rem;
+    color: $primary-waning-color
+  }
+  &+.rating {
+    margin-left: 0.3rem;
+  }
+}

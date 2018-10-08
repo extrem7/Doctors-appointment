@@ -1,0 +1,21 @@
+.post-type-da-record {
+  .subsubsub {
+    li {
+      display: none;
+      &.all, &.canceled, &.done {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.type-da-record {
+  & + tr + tr {
+    .inline-edit-status {
+      display: none;
+    }
+  }
+  .post-state {
+    display: none;
+  }
+}

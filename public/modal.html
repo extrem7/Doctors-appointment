@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Modal</title>
+</head>
+<body>
+<div id="app">
+    <button type="button" class="btn" @click="showModal">
+       Хацкер Лапушара Студио
+    </button>
+
+    <modal v-show="isModalVisible" @close="closeModal" />
+</div>
+<div class="email-form">
+    <div class="input-email-group">
+        <input type="radio">
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="input-email-group">
+        <input type="radio">
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="input-email-group">
+        <input type="radio">
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="input-email-group">
+        <input type="radio">
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="input-email-group">
+        <input type="radio">
+        <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="input-email-group">
+        <textarea name="" id="" rows="10" placeholder="Ваш отзыв"></textarea>
+    </div>
+    <div class="input-email-group">
+        <input type="submit" class="email-submit">
+    </div>
+</div>
+
+
+<!--<script type="text/x-template" id="modal">
+
+    <transition name="modal-fade">
+        <div class="modal-backdrop" role="dialog">
+            <div class="modal" ref="modal">
+                <header class="modal-header">
+                    <slot name="header">
+                        <h2>Записаться на прийом к врачу</h2>
+                    </slot>
+                </header>
+                <section class="modal-body">
+                    <slot name="body">
+                        <form action="/" method="post" class="inline-form has-validation-error">
+                            <div class="input-box">
+                                <input type="text" class="input-control has-error" name="name" required>
+                                <span class="bar"></span>
+                                <label>Имя</label>
+                                <div class="text-error">Some errors here</div>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" class="input-control" name="name" required>
+                                <span class="bar"></span>
+                                <label>Телефон</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" class="input-control" name="name" required>
+                                <span class="bar"></span>
+                                <label>Email</label>
+                            </div>
+                            <div class="input-box w-22">
+                                <input type="date" class="input-control" name="name" required>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-box w-22">
+                                <input type="time" class="input-control" name="name" required>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-box">
+                                <select name="diasease" id=""  class="input-control">
+                                    <option value="" selected>Хацкер лапушара</option>
+                                    <option value="">Хацкер</option>
+                                </select>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-box">
+                                <select name="diasease" id=""  class="input-control">
+                                    <option value="" selected>Хацкер лапушара</option>
+                                    <option value="">Хацкер</option>
+                                </select>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-box w-100">
+                                <textarea name="comment" class="input-control" id="" rows="3" placeholder="Дополнительные коментарии"></textarea>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-box w-100 d-flex justify-content-end">
+                                <input type="submit" class="btn btn-primary" value="Записаться">
+                                <button type="button" class="btn btn-green" @click="close" aria-label="Close modal">Закрыть</button>
+                            </div>
+                        </form>
+                    </slot>
+                </section>
+            </div>
+        </div>
+    </transition>
+</script>-->
+
+
+<!--<script type="text/x-template" id="modal">
+
+    <transition name="modal-fade">
+        <div class="modal-backdrop" role="dialog">
+            <div class="modal modal-sm" ref="modal">
+                <header class="modal-header">
+                    <slot name="header">
+                        <h2>Запись успешно добавлена</h2>
+                    </slot>
+                </header>
+                <section class="modal-body">
+                    <slot name="body">
+                        <p class="text-center">
+                            Обратите внимание, если Вы указали email почту, Вам прийдет уведомление, а также создасться запись в гугл календаре!
+                        </p>
+                        <div class="text-right">
+                            <button type="button" class="btn btn-green" @click="close" aria-label="Close modal">Закрыть</button>
+                        </div>
+                    </slot>
+                </section>
+            </div>
+        </div>
+    </transition>
+</script>-->
+
+<!--<script type="text/x-template" id="modal">
+
+    <transition name="modal-fade">
+        <div class="modal-backdrop" role="dialog">
+            <div class="modal modal-sm" ref="modal">
+                <header class="modal-header">
+                    <slot name="header">
+                        <h2>Предупреждение</h2>
+                    </slot>
+                </header>
+                <section class="modal-body">
+                    <slot name="body">
+                        <p class="text-center">
+                            <i class="fa fa-exclamation-triangle warning" aria-hidden="true"></i>
+                           Извините но Вы уже оставили свой отзыв!
+                        </p>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-warning" @click="close" aria-label="Close modal">Закрыть</button>
+                        </div>
+                    </slot>
+                </section>
+            </div>
+        </div>
+    </transition>
+</script>-->
+
+<script type="text/x-template" id="modal">
+
+    <transition name="modal-fade">
+        <div class="modal-backdrop" role="dialog">
+            <div class="modal modal-sm" ref="modal">
+                <header class="modal-header">
+                    <slot name="header">
+                        <h2>Информация</h2>
+                    </slot>
+                </header>
+                <section class="modal-body">
+                    <slot name="body">
+                        <p class="text-center">
+                            <i class="fa fa-thumbs-o-up success" aria-hidden="true"></i>
+                          Спасибо за отзыв, мы ценим каждый из них и стараемся быть лучше!
+                        </p>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-success" @click="close" aria-label="Close modal">Закрыть</button>
+                        </div>
+                    </slot>
+                </section>
+            </div>
+        </div>
+    </transition>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
